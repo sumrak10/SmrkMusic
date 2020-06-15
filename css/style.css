@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+*:focus
+{
+    outline: none;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 18px;
+    color: aliceblue;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+span{
+    cursor: default;
+}
+a {
+    text-decoration: none;
+}
+/* ____Планы____
+[+]Шрифт
+[+]Цветовая палитра
+[~]Иконки
+ | [+]Рядом с меню
+ | [-]В трей
+[+] Header как в AIMP с фиксированной длинной (лого, меню) и (свернуть, закрыть) */
+
+.demo {
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-svg {
+    width: 33px;
+    height: 33px;
+}
+.img-svg-playlist {
+    width: 33px;
+    height: 33px;
+}
+.img-svg-internet {
+    width: 32px;
+    height: 32px;
+}
+.img-svg-settings {
+    width: 31px;
+    height: 31px;
+}
+.img-svg {
+    fill: red;
+}
+.dragdrop {
+    position: relative;
+    z-index: 500;
+}
+.dragdrop-field {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff99;
+    z-index: 500;
+    /* background-color: #000; */
+}
+.dragdrop-field img {
+    animation: blink 1s linear infinite;
+}
+@keyframes blink {
+    0% {
+        width: 2em;
+        height: 2em;
+    }
+    50% {
+        width: 3em;
+        height: 3em;
+    }
+    100% {
+        width: 2em;
+        height: 2em;
+    }
+}
+/* -------------------INFO------------------- */
+.information {
+    display: none;
+    position: absolute;
+    top: 40px;
+    width: 100vw;
+    height: 93vh;
+    background-color: #efeeee;
+    z-index: 400;
+}
+.information-dark {
+    background-color: #101111;
+}
+.information-active {
+    display: flex;
+}
+.information-main {
+    display: flex;
+    justify-content: center;
+}
+.versions {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+}
+.version {
+    border: 1px solid #0b0c0c;
+    padding: 2vw;
+    width: 42vw;
+}
+.version-header {
+    font-weight: bold;
+}
+.version-info {
+    margin-left: 10px;
+}
+.version-info > ul > li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+}
+.authors {
+    border: 1px solid #0b0c0c;
+    width: 42vw;
+    padding: 2vw;
+}
+.authors > ul > li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-links {
+    display: flex;
+    align-items: center;
+}
+.social-imgs {
+    display: block;
+    color: #000;
+    width: 20px;
+    margin: 3px;
+}
+.social-imgs-dark {
+    color: #fff;
+}
+/* -------------------HEADER------------------- */
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 100;
+    -webkit-app-region: drag;
+}
+.header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+}
+.menuactive {
+    margin-left: 20px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-left: -100px;
+    transition: all 0.3s ease;
+}
+.nav {
+    z-index: 5;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+.main-menu {
+    border-radius: 0 0 10px 0;
+}
+
+.main-menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 40px;
+}
+.logo {
+    width: 25px;
+    height: 25px;
+}
+.main-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 40px;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 15px;
+}
+.logo-img {
+    width: 20px;
+}
+.logo-img-dark {
+    fill: white;
+}
+.manage-menu {
+    border-radius: 0 0 0 10px;
+}
+.manage-menu-item {
+    height: 30px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* -------------------MAIN------------------- */
+main {
+    margin-top: 30px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+.music-menu {
+    margin-top: 60px;
+    /* width: 100vw; */
+    transition: all .3s ease;
+}
+.music-menu-when-menu-active {
+    margin-left: 100px;
+}
+.local-music {
+    position: absolute;
+    display: none;
+}
+.playlist-music {
+    position: absolute;
+    display: none;
+}
+.internet-music {
+    position: absolute;
+    display: none;
+}
+.settings {
+    position: absolute;
+    display: none;
+}
+.music-active {
+    display: flex;
+}
+
+.local-folders {
+    margin-left: 3vw;
+    width: 30vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+.local-folder {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.folder {
+    display: flex;
+    padding: 3px;
+    border-bottom: 1px solid #00000000;
+}
+.folder:hover {
+    margin-left: 3px;
+}
+.folder-name {
+    width: 15vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.folder-active {
+    margin-left: 3px;
+}
+.folder-list {
+    display: none;
+    margin-left: 25px;
+    flex-direction: column;
+    transition: all .3s ease;
+}
+.folder-list-active {
+    display: flex;
+}
+.folder-list-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 15vw;
+    padding: 1px;
+    margin: 2px;
+    border-bottom: 1px solid #00000000;
+}
+/* .folder-list-item:hover {
+    border-bottom: 1px solid #000;
+} */
+
+.opened-folder {
+    display: flex;
+    flex-direction: column;
+    width: 57vw;
+    min-height: 50px;
+    margin-left: 3vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+.music-list {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+.music-list-active {
+    display: flex;
+}
+.music-list-adding {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 68vh;
+}
+.music-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 3px;
+    font-size: 12px;
+}
+/* .music-audio {
+    display: none;
+} */
+.music-list-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 15px;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+}
+.music-item-prop-menu {
+    justify-content: center;
+}
+.music-item-prop {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    user-select: text;
+    width: 14vw;
+    overflow: hidden;
+}
+.music-item-path {
+    padding: 10px;
+}
+/* -------------------SETTINGS------------------- */
+.settings-menu {
+    width: 93vw;
+    margin-left: 3vw;
+    border-radius: 10px;
+    height: 68vh;
+    padding: 15px;
+}
+.switch {
+    display: flex;
+    align-items: center;
+}
+.switch-text {
+    margin-right: 3px;
+}
+.switch-btn {
+    display: flex;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #efeeee;
+    box-shadow:  4px 4px 7px #a5a4a4, 
+             -4px -4px 7px #ffffff;
+    transition: all .3s ease;
+}
+.switch-btn-checked {
+    background-color: #101111;
+    box-shadow:  4px 4px 7px #0b0c0c, 
+             -4px -4px 7px #151616;
+}
+.switch-ball {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all .3s ease;
+}
+.switch-ball-checked {
+    left: 35px;
+    background-color: red;
+}
+
+
+/* -------------------PLAYER------------------- */
+footer {
+    position: absolute;
+    bottom: 0px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92vw;
+    height: 60px;
+    border-radius: 50px;
+}
+.player-info {
+    margin-left: 30px;
+    width: 200px;
+}
+.player-control {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.player-control-items {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+}
+.player-submenu {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    width: 200px;
+}
+.vol-icon {
+    margin-right: 3px;
+}
+/* -------------------FONTS------------------- */
+@font-face {
+    font-family: "Forum"; 
+    src: url("../static/fonts/Forum/Forum-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; } 
+@font-face {
+    font-family: "Comfortaa"; 
+    src: url("../static/fonts/Comfortaa/Comfortaa-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; }

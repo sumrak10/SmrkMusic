@@ -1,0 +1,255 @@
+/* -------------------BURGER------------------- */
+.burger, .burger:before, .burger:after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 2px;
+    transition: .2s ease-in-out;
+}
+.burger:before {
+    content: '';
+    top: -5px;
+}
+.burger:after {
+    content: '';
+    top: 5px;
+}
+
+.main-menu-item:hover .burger:before {
+    top: -7px;
+    width: 17px;
+}
+.main-menu-item:hover .burger {
+    width: 17px;
+}
+.main-menu-item:hover .burger:after {
+    top: 7px;
+    width: 17px;
+}
+.burger-active {
+    width: 17px;
+}
+.burger-active:before {
+    top: -7px;
+    width: 17px;
+}
+.burger-active:after {
+    top: 7px;
+    width: 17px;
+}
+/* -------------------INFO------------------- */
+.info {
+    position: absolute;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    transition: all .1s ease-in-out;
+}
+.main-menu-item:hover .info {
+    font-size: 20px;
+}
+/* -------------------MINIMIZE------------------- */
+.minimize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.minimize:before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    transition: all .3s ease-in-out;
+}
+.manage-menu-item:hover .minimize:before {
+    transform: rotate(-180deg);
+}
+/* -------------------FULLSCREEN------------------- */
+.fullscreen {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullscreen:before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    transition: all .4s ease-in-out;
+}
+.manage-menu-item:hover .fullscreen:before {
+    transform: rotate(-180deg);
+}
+/* -------------------WINDOW------------------- */
+.window {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.window:before, .window:after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transition: all .4s ease-in-out;
+}
+.window:before {
+    top: -4px;
+    right: -4px;
+}
+.window:after {
+    bottom: -4px;
+    left: -4px;
+}
+.manage-menu-item:hover .window:before {
+    transform: rotate(-180deg);
+}
+.manage-menu-item:hover .window:after {
+    transform: rotate(180deg);
+}
+/* -------------------CLOSE------------------- */
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close:before, .close:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    transition: all .4s ease-in-out;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+.close-menu-item:hover{
+    background-color: #f00;
+}
+.close-menu-item:hover .close:before {
+    transform: rotate(-135deg);
+}
+.close-menu-item:hover .close:after {
+    transform: rotate(-225deg);
+}
+
+
+.arrow {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all .3s ease;
+}
+.arrow-1, .arrow-2 {
+    position: absolute;
+    width: 10px;
+    height: 1px;
+
+    left: 5px;
+    transition: all .1s ease;
+    background-color: #000;
+}
+.arrow-active-1 {
+    transform: rotate(45deg);
+    left: 2px;
+}
+.arrow-active-2 {
+    transform: rotate(-45deg);
+    left: 8px;
+}
+
+
+/* -------------------PLAYER------------------- */
+
+
+
+
+.darkrange[type='range'] {
+    width: 150px;
+    height: 10px;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: #101111; 
+    box-shadow: inset 4px 4px 7px #0b0c0c, 
+            inset -4px -4px 7px #151616;
+}
+.darkrange[type='range']::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: red;
+    -webkit-appearance: none;
+}
+.rangelight[type='range'] {
+    width: 150px;
+    height: 10px;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: #efeeee; 
+    box-shadow: inset 5px 5px 10px #c6c6c6, 
+            inset -5px -5px 10px #ffffff;
+}
+.rangelight[type='range']::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: black;
+    -webkit-appearance: none;
+}
+
+
+.play-pause, .play-pause2 {
+    width: 30px; height: 30px;
+    background-color: #000;
+    color: #efeeee;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right,
+                                      transparent 40%,
+                                      currentColor 40%,
+                                      currentColor 60%,
+                                      transparent 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: background-size .3s;
+}
+.play-pause:before,
+.play-pause:after,
+.play-pause2:before,
+.play-pause2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #efeeee;
+    transform: skew(90deg);
+    transform-origin: top left;
+    transition: transform .3s ease-in-out;
+}
+.play-pause2:after,
+.play-pause2::before {
+    background-color: #101111;
+}
+.play-pause:after {
+    transform-origin: bottom left;
+}
+.play-pause.paused {
+    background-size: 0 100%;
+}
+.play-pause.paused:before {
+    transform: skew(64deg);
+}
+.play-pause.paused:after {
+    transform: skew(117deg);
+}

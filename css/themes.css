@@ -1,0 +1,160 @@
+/* -------------------NEOLIGHT------------------- */
+.neo-body {
+    background-color: #efeeee;
+    color: #000000;
+}
+.neo-img-svg {
+    fill: black;
+}
+.neo-menu {
+    background-color: #efeeee;
+    box-shadow:  4px 4px 7px #bfbebe, 
+             -4px -4px 7px #ffffff;
+}
+.neo-elem, .neo-elem:before, .neo-elem:after {
+    background-color: #000000;
+}
+.neo-elem-screen:before, .neo-elem-screen:after {
+    border: 2px solid #000000 ;
+}
+.neo-nav {
+    background-color: #efeeee;
+    box-shadow:  7px 7px 14px #bfbebe, 
+             -7px -7px 14px #ffffff;
+}
+.neo-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: all 0.1s ease-in-out;
+    background-color: #efeeee;
+    box-shadow: inset 7px 7px 14px #bfbebe, 
+            inset -7px -7px 14px #ffffff;
+}
+.neo-nav-item:hover svg{
+    width: 2em;
+    height: 2em;
+}
+.neo-nav-item:hover {
+    background-color: #efeeee;
+    box-shadow: inset 7px 7px 14px #bfbebe, 
+            inset -7px -7px 14px #ffffff;
+
+}
+.neo-nav-item-active {
+    background-color: #efeeee;
+    box-shadow: 7px 7px 14px #bfbebe, 
+            -7px -7px 14px #ffffff;
+
+}
+.neo-nav-item-active svg{
+    width: 2em;
+    height: 2em;
+}
+.neo-nav-item-active:hover {
+    background-color: #efeeee;
+    box-shadow: 7px 7px 14px #bfbebe, 
+            -7px -7px 14px #ffffff;
+    
+}
+.neo-local-folders {
+    background: #efeeee;
+    box-shadow:  8px 8px 16px #b8b7b7, 
+                -8px -8px 16px #ffffff;
+}
+.neo-opened-folder {
+    background: #efeeee;
+    box-shadow:  8px 8px 16px #b8b7b7, 
+                -8px -8px 16px #ffffff;
+}
+.neo-player {
+    background-color: #efeeee;
+    box-shadow:  10px 10px 20px #cbcaca, 
+             -10px -10px 20px #ffffff;
+}
+
+
+/* -------------------NEODARK------------------- */
+.neodark-body {
+    background-color: #101111;
+    color: #ffffff;
+}
+.neodark-block {
+    background-color: #101111;
+    box-shadow: -6px -6px 16px 16px #141414;
+    box-shadow: 6px 6px 16px #000000;
+}
+.neodark-elem, .neodark-elem:before, .neodark-elem:after {
+    background-color: #ffffff;
+}
+.neodark-elem-screen:before, .neodark-elem-screen:after {
+    border: 2px solid #ffffff ;
+}
+.neodark-nav {
+    background: #101111;
+    box-shadow:  16px 16px 25px #090a0a, 
+    -16px -16px 25px #171818;
+
+}
+.neodark-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: all 0.1s ease-in-out;
+    background-color: #101111;
+    box-shadow: inset 21px 21px 42px #090a0a, 
+            inset -21px -21px 42px #171818;
+}
+.neodark-nav-item:hover svg{
+    width: 2em;
+    height: 2em;
+}
+.neodark-nav-item:hover {
+    background: #101111;
+    box-shadow: inset 16px 16px 25px #090a0a, 
+                inset -16px -16px 25px #171818;
+
+}
+.neodark-nav-item-active {
+    background: #101111;
+box-shadow: 21px 21px 42px #090a0a, 
+        -21px -21px 42px #171818;
+
+}
+.neodark-nav-item-active svg{
+    width: 2em;
+    height: 2em;
+}
+.neodark-nav-item-active:hover {
+    background: #101111;
+    box-shadow: 21px 21px 42px #090a0a, 
+                -21px -21px 42px #171818;
+    
+}
+.neodark-local-folders {
+    background: #101111;
+    box-shadow:  13px 13px 27px #0b0b0b, 
+    -13px -13px 27px #151717;
+
+}
+.neodark-opened-folder {
+    background: #101111;
+    box-shadow:  13px 13px 27px #0b0b0b, 
+    -13px -13px 27px #151717;
+}
+.neodark-player {
+    background: #101111;
+    box-shadow:  13px 13px 27px #0b0b0b, 
+    -13px -13px 27px #151717;
+
+}

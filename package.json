@@ -1,0 +1,26 @@
+{
+  "name": "SmrkMusic",
+  "version": "1.0.0",
+  "description": "Music player by smrk10 inc.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Nurlan Urazkulov",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.0"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0",
+    "update-electron-app": "^1.5.0"
+  }
+}
