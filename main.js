@@ -4,7 +4,7 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
 require('update-electron-app')({
-  repo: 'github-user/repo',
+  repo: 'https://github.com/sumrak10/SmrkMusic',
   updateInterval: '1 hour',
   logger: require('electron-log')
 })
